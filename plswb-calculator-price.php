@@ -728,3 +728,19 @@ function get_products()
         'items' => $product
     ]);
 }
+
+
+add_action('woocommerce_after_add_to_cart_button', 'fabric_length_product_field');
+function fabric_length_product_field()
+{
+    woocommerce_form_field("plswb_input_GG", array(
+        'type'          => 'radio',
+        'class'         => array('wrap_item_options_plswb my-field-class form-row-wide'),
+        'label'         => __('title_brand', ''),
+        'required'      => false,
+        'options'       => [
+            200000 => 'SUMSUNG',
+            500000 => 'LG'
+        ],
+    ), '');
+}
