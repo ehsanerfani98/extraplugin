@@ -132,5 +132,5 @@ jQuery("#plswb_sortable").sortable();
 
 function set_check(item) {
     alert();
-    jQuery(item).prop('checked', true);
+    jQuery(item).attr('checked');
 }
