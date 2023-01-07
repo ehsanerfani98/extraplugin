@@ -234,9 +234,7 @@ function extra_fields_add_meta_boxes()
 function view_plswb_extra_options()
 {
 ?>
-
-
-    <!-- <div id="wrap-fields" style="display: none;">
+    <div id="wrap-fields" style="display: none;">
         <div class="col-lg-12 wrap-section-fields drag-card">
             <div class="row">
                 <div class="col-lg-12">
@@ -267,7 +265,7 @@ function view_plswb_extra_options()
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="mb-3">
-                                        <input class="" type="checkbox" value="true" name="" id="ext_required">
+                                        <input class="form-check-input" type="checkbox" value="true" name="" id="ext_required">
                                         <label class="form-check-label" for="ext_required">
                                             الزامی
                                         </label>
@@ -348,7 +346,7 @@ function view_plswb_extra_options()
                                             <div class="col-lg-12">
                                                 <div class="mb-3">
                                                     <div class="">
-                                                        <input class="" type="checkbox" value="" name="" id="ext_disable_org_show_products_rules">
+                                                        <input class="" type="checkbox" value="true" name="" id="ext_disable_org_show_products_rules">
                                                         <label class="form-check-label" for="ext_disable_org_show_products_rules">
                                                             غیر فعال کردن محصولات شامل کلی
                                                         </label>
@@ -379,7 +377,7 @@ function view_plswb_extra_options()
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <div class="row">
 
