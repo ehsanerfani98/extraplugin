@@ -67,7 +67,7 @@ jQuery(document).ready(function ($) {
         $(fields).find('#ext_price').attr('name', 'ext_options[data]' + '[' + unique_id + '][price]');
         $(fields).find('#ext_value_select').attr('name', 'ext_options[data]' + '[' + unique_id + '][value_select]');
         $(fields).find('#not_show_products_rules').attr('name', 'ext_options[data]' + '[' + unique_id + '][not_show_products_rules][]');
-        $(fields).find('#ext_disable_org_show_products_rules').attr('name', 'ext_options[data]' + '[' + unique_id + '][disable_org_show_products_rules]');
+        $(fields).find('#ext_disable_org_show_products_rules').attr({ 'name': 'ext_options[data]' + '[' + unique_id + '][disable_org_show_products_rules]', 'onClick': 'set_check(this)' });
         $(fields).find('#inside_show_products_rules').attr('name', 'ext_options[data]' + '[' + unique_id + '][inside_show_products_rules][]');
 
 
@@ -128,3 +128,8 @@ function makeid(length) {
 
 
 jQuery("#plswb_sortable").sortable();
+
+
+function set_check(item) {
+    jQuery(item).prop('checked', true);
+}
