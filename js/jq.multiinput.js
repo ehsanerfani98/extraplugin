@@ -4,16 +4,16 @@ jQuery(document).ready(function ($) {
 
     $('.products_rules').select2({
         language: {
-            searching: function() {
+            searching: function () {
                 return "در حال جستجو...";
             }
-        },        placeholder: "محصولات مورد نظر خود را انتخاب کنید.",
+        }, placeholder: "محصولات مورد نظر خود را انتخاب کنید.",
         ajax: {
             url: ajaxurl,
             data: function (params) {
                 return {
-                  search: params.term,
-                  action: 'get_products_org_plswb'
+                    search: params.term,
+                    action: 'get_products_org_plswb'
                 }
             },
             type: "post",
@@ -26,10 +26,10 @@ jQuery(document).ready(function ($) {
 
     });
 
-    
+
     $('.products_rules_db').select2({
         language: {
-            searching: function() {
+            searching: function () {
                 return "در حال جستجو...";
             }
         },
@@ -38,8 +38,8 @@ jQuery(document).ready(function ($) {
             url: ajaxurl,
             data: function (params) {
                 return {
-                  search: params.term,
-                  action: 'get_products_plswb'
+                    search: params.term,
+                    action: 'get_products_plswb'
                 }
             },
             type: "post",
@@ -60,10 +60,10 @@ jQuery(document).ready(function ($) {
 
         let fields = $('#wrap-fields').contents().clone();
 
-        $(fields).find('#ext_title').attr({'name': 'ext_options[data]' + '[' + unique_id + '][title]', 'required':'required'});
+        $(fields).find('#ext_title').attr({ 'name': 'ext_options[data]' + '[' + unique_id + '][title]', 'required': 'required' });
         $(fields).find('#ext_help').attr('name', 'ext_options[data]' + '[' + unique_id + '][help]');
         $(fields).find('#ext_required').attr('name', 'ext_options[data]' + '[' + unique_id + '][required]');
-        $(fields).find('#ext_type').attr({'name': 'ext_options[data]' + '[' + unique_id + '][type]', 'required':'required'});
+        $(fields).find('#ext_type').attr({ 'name': 'ext_options[data]' + '[' + unique_id + '][type]', 'required': 'required' });
         $(fields).find('#ext_price').attr('name', 'ext_options[data]' + '[' + unique_id + '][price]');
         $(fields).find('#ext_value_select').attr('name', 'ext_options[data]' + '[' + unique_id + '][value_select]');
         $(fields).find('#not_show_products_rules').attr('name', 'ext_options[data]' + '[' + unique_id + '][not_show_products_rules][]');
@@ -80,7 +80,7 @@ jQuery(document).ready(function ($) {
         $(selects3).each(function () {
             $(this).select2({
                 language: {
-                    searching: function() {
+                    searching: function () {
                         return "در حال جستجو...";
                     }
                 },
@@ -89,8 +89,8 @@ jQuery(document).ready(function ($) {
                     url: ajaxurl,
                     data: function (params) {
                         return {
-                          search: params.term,
-                          action: 'get_products_plswb'
+                            search: params.term,
+                            action: 'get_products_plswb'
                         }
                     },
                     type: "post",
@@ -104,8 +104,6 @@ jQuery(document).ready(function ($) {
         });
 
     });
-
-
 
 });
 
@@ -129,4 +127,4 @@ function makeid(length) {
 }
 
 
-jQuery( "#plswb_sortable" ).sortable();
+jQuery("#plswb_sortable").sortable();
